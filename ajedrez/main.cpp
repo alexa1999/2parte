@@ -42,12 +42,13 @@ public:
 };
 int main()
 {
+    Pieza*tablero[8][8];
     Posicion pos(0,0);
-    Pieza* p;
+    //Pieza* p;
     Peon peon(pos);//se esta haciedno el polimorfismo
-    p=&peon;
-    p->avanzarPieza();
-
-
+    //p=&peon;
+    //p->avanzarPieza();
+    tablero[0][0]=&peon;
+    tablero[0][0]->avanzarPieza();//es lo mismo de el anteriro solo que estee lo utilizamos en una matriz
     return 0;
 }
